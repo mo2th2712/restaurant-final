@@ -24,7 +24,7 @@ jobs:
           node-version: '20.x'
 
       - name: npm install, build, and test
-        # (هنا قمنا بإضافة سطر working-directory)
+        # (هنا يتم توجيه البناء للمجلد الصحيح)
         working-directory: my-restaurant-server
         run: |
           npm install
@@ -35,7 +35,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          path: my-restaurant-server # <--- تم تعديل المسار هنا
+          # (يتم تحميل محتويات مجلد السيرفر كناتج للبناء)
+          path: my-restaurant-server/ 
           
   deploy:
     runs-on: ubuntu-latest
@@ -63,5 +64,5 @@ jobs:
         with:
           app-name: 'my-rest-server-api'
           slot-name: 'Production'
-          # (هنا قمنا بتعديل package ليستخدم محتويات المجلد الذي تم تحميله)
+          # (يتم نشر محتويات الملف الذي تم تحميله)
           package: node-app
