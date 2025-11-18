@@ -1,0 +1,186 @@
+/* src/components/OrderView.css */
+
+/* --- تنسيق الحاوية الرئيسية للأعمدة --- */
+.order-view-container {
+  display: flex; /* هذا السطر هو المسؤول عن وضع الأعمدة بجانب بعضها */
+  gap: 20px; 
+  padding: 10px;
+  height: 100%;
+  overflow-x: auto; 
+  background-color: #f7fafc; 
+  direction: rtl; 
+  box-sizing: border-box; 
+}
+
+.cashier-dashboard .order-view-container {
+  background-color: #1f2937; 
+}
+
+/* --- تنسيق العمود الواحد --- */
+.order-column {
+  min-width: 340px; 
+  max-width: 360px;
+  flex: 1;
+  background-color: #ffffff; 
+  border-radius: 8px;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cashier-dashboard .order-column {
+  background-color: #374151; 
+}
+
+/* --- عناوين الأعمدة --- */
+.column-title {
+  color: #333;
+  text-align: center;
+  padding: 15px;
+  margin: 0;
+  border-bottom: 2px solid #ddd;
+  font-size: 1.4em;
+  font-weight: 700;
+  flex-shrink: 0;
+  border-radius: 8px 8px 0 0;
+}
+
+.cashier-dashboard .column-title {
+  color: white;
+  border-bottom: 2px solid #4b5563;
+}
+
+.pending-title { background-color: #ffc107; }
+.in-progress-title { background-color: #0d6efd; color: white; }
+.completed-title { background-color: #198754; color: white; }
+
+/* --- قائمة الطلبات داخل العمود --- */
+.order-list { 
+  padding: 10px; 
+  overflow-y: auto; 
+  flex-grow: 1; 
+}
+
+/* --- بطاقة الطلب --- */
+.order-card-kds {
+  background: #ffffff;
+  color: #1a1a1a; 
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  direction: rtl;
+}
+
+.cashier-dashboard .order-card-kds {
+  background: #ffffff;
+}
+
+.order-card-kds.pending { border-top: 5px solid #ffc107; }
+.order-card-kds.in-progress { border-top: 5px solid #0d6efd; }
+.order-card-kds.completed { border-top: 5px solid #198754; background-color: #f3f4f6; }
+
+.order-kds-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 10px; 
+    margin-bottom: 10px; 
+}
+.order-kds-header h3 { margin: 0; font-size: 1.1em; color: #111; }
+.order-kds-header span { font-size: 0.9em; color: #555; }
+
+.order-kds-notes { 
+    background-color: #fffbef; 
+    border: 1px solid #ffeeba; 
+    padding: 8px; 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+    font-size: 0.9em; 
+    color: #856404;
+}
+.order-kds-notes strong { color: #664d03; }
+
+.order-kds-items { list-style: none; padding: 0; margin: 0 0 15px 0; }
+.order-kds-items li { margin-bottom: 5px; font-size: 0.95em; }
+.item-name { font-weight: bold; }
+.item-kds-options { list-style-type: none; padding-right: 15px; font-size: 0.9em; color: #444; }
+
+/* --- أزرار التحكم --- */
+.order-actions-row {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.kds-action-btn { 
+    flex-grow: 1;
+    padding: 8px; 
+    border: none; 
+    border-radius: 5px; 
+    color: white; 
+    font-family: 'Cairo', sans-serif; 
+    font-size: 1em; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: opacity 0.3s; 
+}
+.kds-action-btn:hover { opacity: 0.9; }
+
+.start-btn { background-color: #0e9f6e; }
+.complete-btn { background-color: #007bff; }
+
+.print-kds-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.delete-kds-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    font-family: 'Cairo', sans-serif;
+    cursor: pointer;
+}
+
+.full-width-btn {
+    width: 48%; 
+    font-size: 0.9em;
+    padding: 8px;
+}
+
+.order-rating-display { direction: ltr; }
+.order-rating-display .star-on { color: #ffc107; font-size: 1.1em; }
+.order-rating-display .star-off { color: #e0e0e0; font-size: 1.1em; }
+
+.order-kds-notes.rating-comment { background-color: #e0e7ff; border-color: #c7d2fe; }
+.order-kds-notes.rating-comment strong { color: #4338ca; }
+/* ... (حافظ على الكود السابق كما هو وأضف هذا في النهاية) */
+
+.delete-all-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+.delete-all-btn:hover {
+    background-color: #c82333;
+}

@@ -1,0 +1,127 @@
+.user-manager {
+    padding: 30px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: right;
+}
+
+.user-manager h2, .user-manager h3 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.user-form {
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.user-form input[type="text"],
+.user-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+.user-form button {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.status-message {
+    text-align: center;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.user-list-container {
+    margin-top: 40px;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.user-table th {
+    background-color: #f2f2f2;
+}
+
+.user-table .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* (الكود الجديد الخاص بأزرار الصلاحيات) */
+.permission-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+.permission-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.permission-toggle .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+.permission-toggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+.permission-toggle input:checked + .slider {
+    background-color: #28a745;
+}
+.permission-toggle input:not(:checked) + .slider {
+    background-color: #dc3545;
+}
+.permission-toggle input:checked + .slider:before {
+    transform: translateX(26px);
+}

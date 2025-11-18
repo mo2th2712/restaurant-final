@@ -1,0 +1,78 @@
+/* src/components/RatingModal.css */
+
+.rating-modal {
+  text-align: center;
+}
+
+.rating-modal .modal-header h2 {
+  color: var(--text-primary, #1a1a1a);
+}
+
+.rating-modal .modal-header p {
+  color: var(--text-secondary, #555);
+  font-size: 1.1em;
+}
+
+/* (نظام النجوم) */
+.star-rating {
+  margin: 20px 0;
+  direction: ltr; /* (النجوم يجب أن تبدأ من اليسار لليمين) */
+}
+
+.star-rating button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+}
+.star-rating .star {
+  font-size: 3rem; /* (حجم النجمة) */
+  transition: color 0.2s;
+}
+.star-rating .star-off .star {
+  color: #ccc; /* (لون النجمة المطفأة) */
+}
+.star-rating .star-on .star {
+  color: #ffc107; /* (لون النجمة المضاءة - أصفر) */
+}
+
+/* ⬅️ (جديد): تنسيق مربع التعليق */
+.rating-comment-box {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Cairo', sans-serif;
+  resize: vertical;
+  box-sizing: border-box; /* (لضمان عدم تجاوز العرض) */
+}
+
+.submit-rating-btn {
+  background-color: var(--primary-color, #e62b1b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+.close-rating-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 0.9em;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.rating-message {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #28a745;
+}

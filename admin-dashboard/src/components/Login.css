@@ -1,0 +1,64 @@
+﻿/* src/components/Login.css */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.login-form {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+    .login-form h2 {
+        margin-bottom: 1.5rem;
+        color: #333;
+    }
+
+.form-group {
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #555;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box; /* يمنع تجاوز العرض */
+    }
+
+.login-btn {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #d9534f; /* لون أحمر الأدمن */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .login-btn:hover {
+        background-color: #c9302c;
+    }
+
+.error-message {
+    color: #d9534f;
+    margin-bottom: 1rem;
+}

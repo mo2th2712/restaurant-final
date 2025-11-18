@@ -1,0 +1,36 @@
+﻿/* src/index.css (تنظيف وتطبيق الخط العربي) */
+
+/* 1. استيراد الخط العربي */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+/* 2. تطبيق الخط والتنسيق الأساسي */
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f7fafc; /* خلفية فاتحة */
+  direction: rtl; 
+}
+
+/* 3. تنسيق العناصر الأساسية */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* 4. تحديد لون المطعم الأساسي (يمكن تعديله) */
+:root {
+  --primary-color: #e62b1b; /* لون أحمر/برتقالي أساسي للمطعم */
+  --secondary-color: #1a202c; /* لون ثانوي داكن */
+}
+
+/* 5. تنسيق شاشة التحميل */
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}

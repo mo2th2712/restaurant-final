@@ -1,0 +1,142 @@
+/* admin-dashboard/src/components/MenuManager.css (الكود النظيف والنهائي) */
+.menu-manager {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: right;
+}
+
+.menu-manager h2 {
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* --- نموذج الإضافة والتعديل --- */
+.menu-form {
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin-bottom: 30px;
+    display: grid; /* استخدام Grid لتنظيم الحقول */
+    grid-template-columns: 1fr 1fr; /* عمودين */
+    gap: 15px;
+}
+
+.menu-form input[type="text"],
+.menu-form input[type="number"],
+.menu-form input[type="file"],
+.menu-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* جعل حقل الوصف يأخذ عرض كامل */
+.menu-form textarea {
+    grid-column: 1 / -1; /* يمتد على العمودين */
+    height: 80px;
+    resize: vertical;
+}
+
+/* ⬅️ تنسيق حقل رفع الملف */
+.form-group-file {
+    grid-column: 1 / -1; /* يمتد على العمودين */
+    background: #f9f9f9;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form-group-file label {
+    font-weight: bold;
+    color: #555;
+}
+.form-group-file input[type="file"] {
+    border: none;
+    padding: 0;
+}
+
+
+/* زر الحفظ */
+.save-settings-btn {
+    grid-column: 1 / -1; /* يمتد على العمودين */
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+.save-settings-btn:hover {
+    background-color: #218838;
+}
+
+.status-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #007bff;
+}
+
+/* --- جدول عرض المنيو --- */
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.menu-table th, .menu-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.menu-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.menu-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* ⬅️ تنسيق الصورة المصغرة في الجدول */
+.item-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid #eee;
+}
+
+.menu-table .actions button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: white;
+    font-size: 0.9em;
+}
+
+.menu-table .actions .edit-btn {
+    background-color: #007bff;
+}
+
+.menu-table .actions .delete-btn {
+    background-color: #dc3545;
+}

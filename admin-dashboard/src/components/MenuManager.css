@@ -1,0 +1,261 @@
+/* admin-dashboard/src/components/MenuManager.css (الكود الاحترافي النهائي) */
+.menu-manager {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: right;
+}
+
+.menu-manager h2, .menu-manager h3 {
+    text-align: center;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* --- 1. نموذج الإضافة الاحترافي --- */
+.menu-form-professional {
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.menu-form-professional input[type="text"],
+.menu-form-professional input[type="number"],
+.menu-form-professional textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* هام للـ padding */
+    font-family: 'Cairo', sans-serif;
+}
+
+.menu-form-professional textarea {
+    height: 80px;
+    resize: vertical;
+    margin-bottom: 15px;
+}
+
+.form-group-file {
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* --- 2. (جديد): زر التبديل "نفذت الكمية" --- */
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+.toggle-switch label {
+    cursor: pointer;
+    font-weight: bold;
+    color: #777;
+}
+.toggle-switch input {
+    margin-left: 10px;
+}
+.toggle-switch input:checked + label {
+    color: #28a745; /* أخضر عند التوفر */
+}
+.form-state-toggle:not(:checked) + label {
+    color: #dc3545; /* أحمر عند النفاذ */
+}
+
+/* --- 3. (جديد): واجهة بناء الخيارات الرسومية --- */
+.options-builder {
+    border-top: 2px solid #eee;
+    margin-top: 20px;
+    padding-top: 15px;
+}
+.options-builder h3 {
+    border-bottom: none;
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.option-group-card {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.group-name-input {
+    font-weight: bold;
+    font-size: 1.1em;
+    width: 60% !important;
+    border: 1px dashed #aaa !important;
+}
+
+.group-toggles {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.option-input-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+.option-input-row input {
+    flex: 1;
+}
+
+/* (أزرار الحذف والإضافة) */
+.remove-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.remove-btn-group {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* (أو right: 10px إذا كان التصميم RTL) */
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.add-btn, .add-btn-group {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.add-btn-group {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+.save-settings-btn {
+    padding: 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.cancel-btn {
+    padding: 12px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+/* --- 4. (جديد): جدول عرض المنيو الاحترافي --- */
+.menu-list-container {
+    margin-top: 40px;
+}
+.menu-table-professional {
+    width: 100%;
+    border-collapse: collapse;
+}
+.menu-table-professional th, .menu-table-professional td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: right;
+    vertical-align: middle;
+}
+.menu-table-professional th {
+    background-color: #f2f2f2;
+}
+
+.item-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/* (تنسيق الصنف غير المتوفر) */
+.item-unavailable td {
+    background-color: #fbeeee;
+    color: #aaa;
+}
+
+/* (ستايل زر التبديل السريع "نفذت الكمية" في الجدول) */
+.quick-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+.quick-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #28a745; /* أخضر */
+}
+input:not(:checked) + .slider {
+    background-color: #dc3545; /* أحمر */
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}

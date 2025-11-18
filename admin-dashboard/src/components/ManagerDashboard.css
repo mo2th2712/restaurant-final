@@ -1,0 +1,99 @@
+/* src/components/ManagerDashboard.css (تصميم الشريط الجانبي) */
+.manager-dashboard {
+  display: flex;
+  direction: rtl; 
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; 
+}
+
+/* --- 1. الشريط الجانبي (Sidebar) --- */
+.sidebar {
+  width: 260px; 
+  background-color: #1a202c; /* لون داكن احترافي */
+  color: #e2e8f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; 
+  height: 100vh;
+  box-sizing: border-box;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.4);
+}
+
+.sidebar-header {
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #2d3748;
+}
+.sidebar-header h3 {
+  margin: 0;
+  color: white;
+  font-size: 1.4em;
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  flex-grow: 1; 
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #a0aec0; 
+  padding: 12px 15px;
+  text-align: right;
+  font-size: 1.1em;
+  font-family: 'Cairo', sans-serif;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #2d3748; 
+  color: white;
+}
+
+.nav-btn.active {
+  background-color: var(--primary-color, #e62b1b); 
+  color: white;
+  font-weight: bold;
+}
+
+.logout-btn {
+  margin-top: 20px; 
+  background-color: #4a5568;
+  color: white;
+  font-weight: 600;
+}
+.logout-btn:hover {
+  background-color: #2d3748;
+}
+
+
+/* --- 2. المحتوى الرئيسي (Main Content) --- */
+.main-content {
+  flex-grow: 1; 
+  background-color: #f7fafc; 
+  padding: 25px;
+  height: 100vh;
+  overflow-y: auto; 
+  box-sizing: border-box;
+}
+
+.main-content h1 {
+  font-size: 2em;
+  color: #1a202c;
+  margin-bottom: 20px;
+}
+
+/* ⬅️ (جديد): ستايل رسالة عدم وجود بيانات */
+.no-data-message {
+  text-align: center;
+  margin-top: 50px;
+  color: #555;
+}
